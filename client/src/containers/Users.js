@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
-import User from '../components/User'
+import User from '../components/users/User'
+import Model from '../models/Users'
 
-class DataRenderer extends Component {
+class Users extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            data: []
+            users: []
         }
+
+        this.model = new Model(props.api)
+
     }
 
     componentDidMount() {
-        this.props.api.getData((data) => { this.setState({ data }) })
+        this.model.getUsers((users) => { this.setState({ users })})
     }
 
     render() {
@@ -25,9 +29,9 @@ class DataRenderer extends Component {
 
         return (
             <div style={styles.container}>
-                Users:
-                {this.state.data &&
-                    this.state.data.map((user) => {
+                <h1>Users:</h1>
+                {this.state.users &&
+                    this.state.users.map((user) => {
                         return (<User user={user} key={user._id}/>)
                     })
                 }
@@ -36,4 +40,4 @@ class DataRenderer extends Component {
     }
 }
 
-export default DataRenderer
+export default Users
