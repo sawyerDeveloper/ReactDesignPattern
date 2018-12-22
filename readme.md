@@ -23,6 +23,9 @@ To start the server and client at the same time (from the root of the project)
 npm run dev
 ```
 
+## Example
+Check out the latest running code at https://react-design-pattern.herokuapp.com/
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
