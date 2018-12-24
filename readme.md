@@ -2,6 +2,8 @@
 
 This repository is an example of how to design the code for a React(Dom or Native) app where you don't need Redux for state management or external CSS files for styling.  In my professional experience these are the 2 biggest causes of problems in modern development.  
 
+This gave me the idea to make ReBorn Framework.  [ReBorn](https://github.com/sawyerDeveloper/ReBorn)
+
 ## Usage
 Install [nodemon](https://github.com/remy/nodemon) globally
 
